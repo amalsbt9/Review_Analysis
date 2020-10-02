@@ -1,0 +1,24 @@
+openapi: "3.0.0"
+
+info:
+  title: "Review Analysis api"
+  description: "An api that serves the  review analysis ml model"
+  version: "1.0"
+ 
+path: 
+  /review_analysis:
+  post:
+    description: "Classify the review as good or bad"
+    
+    requestBody:
+      description: "customer review in json format"
+      required: true
+      content:
+        application/json: {}
+        
+     responses:
+       '200' :
+        description: "return review type good or body"
+        content:
+          application/json: {}
+      
